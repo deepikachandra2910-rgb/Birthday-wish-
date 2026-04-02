@@ -1,0 +1,396 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chhavi ❤️ Ishan | Forever Love</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(45deg, #ff9a9e 0%, #fecfef 25%, #fecfef 75%, #ff9a9e 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            color: #fff;
+        }
+        
+        /* Romantic Background Hearts */
+        .hearts-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        .heart-float {
+            position: absolute;
+            font-size: 1.5rem;
+            color: rgba(255, 182, 193, 0.8);
+            animation: float-hearts 8s linear infinite;
+        }
+        
+        @keyframes float-hearts {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+        }
+        
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .birthday-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff69b4, #ff1493, #ffc0cb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 10px 30px rgba(255,105,180,0.5);
+            margin-bottom: 10px;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 10px #ff69b4); }
+            to { filter: drop-shadow(0 0 30px #ff1493); }
+        }
+        
+        .from-ishan {
+            font-size: 1.5rem;
+            color: #ffc0cb;
+            font-weight: 600;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        /* Progress Heart */
+        .heart-container {
+            text-align: center;
+            padding: 40px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .progress-heart {
+            font-size: 8rem;
+            color: #ffe4e1;
+            margin: 20px 0;
+            transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .heart-full {
+            color: #ff69b4 !important;
+            font-size: 10rem;
+            animation: heartBeat 1s infinite;
+        }
+        
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        
+        /* Questions */
+        .question-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            border: 2px solid rgba(255,105,180,0.3);
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(255,105,180,0.3);
+            position: relative;
+            z-index: 10;
+        }
+        
+        .question {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            color: #ff1493;
+            margin-bottom: 40px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .yes-no-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 20px 40px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .btn-yes {
+            background: linear-gradient(45deg, #ff69b4, #ff1493);
+            color: white;
+            box-shadow: 0 10px 30px rgba(255,105,180,0.5);
+        }
+        
+        .btn-yes:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255,105,180,0.7);
+        }
+        
+        .btn-no {
+            background: transparent;
+            color: #ff69b4;
+            border: 3px solid #ff69b4;
+            animation: shake 0.5s infinite;
+        }
+        
+        .btn-no:hover {
+            background: #ff69b4;
+            color: white;
+            transform: translateY(-5px) !important;
+        }
+        
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
+        }
+        
+        /* Secret Message */
+        .secret-message {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255,182,193,0.9);
+            border-radius: 25px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: none;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .secret-message:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255,105,180,0.5);
+        }
+        
+        .secret-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ff1493;
+            margin-bottom: 15px;
+        }
+        
+        /* Love Letter */
+        .love-letter {
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 50px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(25px);
+            border-radius: 30px;
+            border: 1px solid rgba(255,105,180,0.3);
+            position: relative;
+            z-index: 10;
+            display: none;
+        }
+        
+        .letter-header {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #ff69b4;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .letter-body {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #fff;
+            text-align: justify;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .yes-no-buttons { flex-direction: column; align-items: center; }
+            .btn { width: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div class="hearts-bg" id="heartsBg"></div>
+    
+    <!-- Header -->
+    <header>
+        <h1 class="birthday-title">Happy Birthday Chhavi! 🎂💖</h1>
+        <p class="from-ishan">Made with endless love by Ishan ❤️</p>
+    </header>
+    
+    <!-- Progress Heart -->
+    <div class="heart-container">
+        <div class="progress-heart" id="progressHeart">💖</div>
+        <div style="font-size: 1.2rem; color: #ffc0cb;">Our Love Progress: <span id="progress">0%</span></div>
+    </div>
+    
+    <!-- Questions -->
+    <div class="question-container" id="questionContainer">
+        <div class="question" id="currentQuestion">Did you love Ishan? 💕</div>
+        <div class="yes-no-buttons">
+            <button class="btn btn-yes" onclick="answerYes()">YES 💖</button>
+            <button class="btn btn-no" onclick="answerNo()">NO 😢</button>
+        </div>
+    </div>
+    
+    <!-- Secret Message -->
+    <div class="secret-message" id="secretMessage" onclick="toggleSecret()">
+        <div class="secret-title">💕 Tap to Reveal Our Promise 💕</div>
+        <div id="secretText" style="font-size: 1.5rem; color: #ff1493; font-weight: 700; display: none;">Chhavi & Ishan Forever 💍✨</div>
+    </div>
+    
+    <!-- Love Letter -->
+    <div class="love-letter" id="loveLetter">
+        <h2 class="letter-header">My Dearest Chhavi 💌</h2>
+        <div class="letter-body">
+            <p>From the moment I first saw you, my heart knew you were the one. Your smile lights up my darkest days, your laughter is my favorite melody, and your love is my greatest treasure. Every moment with you feels like a dream I never want to wake from.</p>
+            <br>
+            <p>Today, as you turn 16, I want you to know that my love for you grows stronger every single day. You've brought colors to my world I never knew existed. You make me want to be better, to love deeper, to dream bigger.</p>
+            <br>
+            <p>I promise to stand by you through every laugh, every tear, every adventure. I'll be your biggest cheerleader, your safe place, your forever partner. Chhavi, you are my heart, my soul, my everything.</p>
+            <br>
+            <p>Here's to us - to countless birthdays, endless love, and a lifetime of creating beautiful memories together. I love you more than words can express, today and always.</p>
+            <br>
+            <p style="text-align: right; font-style: italic; font-size: 1.3rem;">
+                Forever yours,<br>
+                <strong>Ishan 💖</strong>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Questions array
+        const questions = [
+            "Did you love Ishan? 💕",
+            "Will you marry me? 💍",
+            "After this surprise, will you go and say 'I love you soo much 🥰' to Ishan? 😘",
+            "Chhavi, will you have the potential to live with me till death? 💞"
+        ];
+        
+        let currentQuestionIndex = 0;
+        let progress = 0;
+        
+        // Floating hearts background
+        function createFloatingHearts() {
+            const heartsBg = document.getElementById('heartsBg');
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.className = 'heart-float';
+                heart.innerHTML = '💖';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+                heartsBg.appendChild(heart);
+                
+                setTimeout(() => heart.remove(), 10000);
+            }, 300);
+        }
+        
+        // Answer handlers
+        function answerYes() {
+            progress += 25;
+            updateProgress();
+            
+            if (currentQuestionIndex < 3) {
+                currentQuestionIndex++;
+                document.getElementById('currentQuestion').textContent = questions[currentQuestionIndex];
+            } else {
+                // All questions answered - complete!
+                completeProposal();
+            }
+        }
+        
+        function answerNo() {
+            // Shake screen effect
+            document.body.style.animation = 'shake 0.5s';
+            setTimeout(() => {
+                document.body.style.animation = '';
+            }, 500);
+        }
+        
+        function updateProgress() {
+            document.getElementById('progress').textContent = progress + '%';
+            const heart = document.getElementById('progressHeart');
+            
+            if (progress === 25) heart.innerHTML = '💗';
+            if (progress === 50) heart.innerHTML = '💓';
+            if (progress === 75) heart.innerHTML = '💖';
+            if (progress === 100) heart.classList.add('heart-full');
+        }
+        
+        function completeProposal() {
+            document.getElementById('progressHeart').innerHTML = '💖';
+            document.getElementById('progressHeart').classList.add('heart-full');
+            document.getElementById('questionContainer').style.display = 'none';
+            document.getElementById('secretMessage').style.display = 'block';
+            document.getElementById('loveLetter').style.display = 'block';
+            
+            // Show secret message immediately
+            setTimeout(() => {
+                document.getElementById('secretText').style.display = 'block';
+            }, 500);
+        }
+        
+        function toggleSecret() {
+            const secretText = document.getElementById('secretText');
+            if (secretText.style.display === 'none') {
+                secretText.style.display = 'block';
+            }
+        }
+        
+        // Add shake animation to body
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes shake {
+                0%, 100% { transform: translateX(0); }
+                10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+                20%, 40%, 60%, 80% { transform: translateX(5px); }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Initialize
+        createFloatingHearts();
+        updateProgress();
+    </script>
+</body>
+</html>
